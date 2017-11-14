@@ -1,0 +1,82 @@
+*{
+    text-align: center;
+}
+body
+{
+    background: url('https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F98%2FWikilaurier_-_chimie.svg%2F450px-Wikilaurier_-_chimie.svg.png&f=1') no-repeat center center fixed;
+    background-size: cover;
+}
+table
+{
+    font-size-adjust: auto;
+    border: 3px solid black;
+}
+td
+{
+    font-size-adjust: 0.5;
+    height: 5vh;
+    min-width: 70px;
+}
+
+.symbol
+{
+    font-size: 4vh;  
+}
+.weight
+{
+    text-align: right;   
+    font-size: 1vh;
+}
+.num
+{
+    
+    text-align: left;
+    font-size: 2vh;
+}
+.Gold
+{
+    border: 1px solid black;
+    background-color: rgba(174, 169, 28, 0.818);
+}
+.HardRed
+{
+    border: 1px solid black;
+    background-color: rgba(208, 9, 9, 0.818);
+}
+.PaleRed
+{
+    border: 1px solid black;
+    background-color: rgba(255, 180, 180, 0.818);
+}
+.Yellow
+{
+    border: 1px solid black;
+    background-color: rgba(255, 248, 53, 0.818);
+}
+.LightBlue
+{
+    border: 1px solid black;
+    background-color: rgba(179, 247, 255, 0.818);
+}
+.DarkBlue
+{
+    border: 1px solid black;
+    background-color: rgba(119, 132, 228, 0.818);
+}
+
+.LightGreen
+{
+    border: 1px solid black;
+    background-color: rgba(155, 247, 152, 0.818);
+}
+.Purple
+{
+    border: 1px solid black;
+    background-color:  rgba(142, 107, 230, 0.818);
+}
+.Pink
+{
+    border: 1px solid black;
+    background-color: rgba(247, 152, 233, 0.818);
+}		
+</style>
