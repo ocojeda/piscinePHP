@@ -6,7 +6,7 @@ function ft_split($str)
     
     $i = 0;
     $r = explode(' ', $str);
-    if($r)
+    if(!(is_numeric($str)))
     {
         $e = count($r);
         $str1 = array();
@@ -20,6 +20,7 @@ function ft_split($str)
         }
         $i++;
     }
+        unset($r);
         return ($str1);
     }
     return ($str);
