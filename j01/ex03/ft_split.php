@@ -3,26 +3,24 @@
 
 function ft_split($str)
 {
-    
-    $i = 0;
-    $r = explode(' ', $str);
     if(!(is_numeric($str)))
     {
-        $e = count($r);
+        $r = explode(' ', $str);
         $str1 = array();
         $u = 0;
-    while ($i < $e)
+    foreach($r as $var)
     {
-        if (!empty($r[$i]))
+        if (!empty($var))
         {
-            $str1[$u] = $r[$i];
+            $str1[$u] = $var;
             $u++;
         }
-        $i++;
     }
-        unset($r);
         return ($str1);
     }
-    return ($str);
+    $r = explode(' ', $str);
+    return ($r);
+    //not sure what to return when argv1=numeric
+    return $str;
 }
 ?>
