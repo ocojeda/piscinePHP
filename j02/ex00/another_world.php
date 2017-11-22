@@ -3,7 +3,7 @@
 if ($argc > 1)
 {
     $str = $argv[1];
-    $str = trim(preg_replace('!\s+!', ' ', $str)); 
+    $str = trim(preg_replace('/[" ""    "]+/', ' ', $str)); 
     echo $str . "\n";           
 }
 ?>
