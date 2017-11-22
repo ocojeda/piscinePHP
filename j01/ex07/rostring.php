@@ -26,11 +26,11 @@ function    print_assap($arr)
     echo($arr[0]);
     if ($i > 1)
     {   
-        echo("\n");
+        echo(" ");
         $u = 1;
         while($u < $i - 1)
         {
-            echo($arr[$u]."\n");
+            echo($arr[$u]." ");
             $u++;
         }
         echo($arr[$u]);
@@ -40,21 +40,20 @@ function    print_assap($arr)
 }
     if($argc >= 2)
     {
-        $u = 1;
-        $arr = ft_split($argv[$u]);
-    /*
-    *
-        ./ssap2.php toto tutu 4234 "_hop XXX" ## "1948372 AhAhAh"
-        test a essayer dans une outre machine, la mienn donne 5
-        a argv  pourtant il y a 7 arguments
-        echo(count($argv));
-    */    $u++;
-        while($u < $argc)
+        $arr = ft_split($argv[1]);
+        
+        $u = count($arr);
+        if($u > 1)
         {
-            $arr = array_merge($arr, ft_split($argv[$u]));
-            $u++;
+            $i = 1;
+            while($i < $u)
+            {
+                $tmp1 = $arr[$i]; 
+                $arr[$i] = $arr[$i-1];
+                $arr[$i-1] = $tmp1;
+                $i++;
+            }
         }
-        sort($arr);
         print_assap($arr);
     }
 ?>
