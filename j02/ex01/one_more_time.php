@@ -14,11 +14,26 @@ function  check_date($tab)
     if($i != 7)
         return 1; 
     if($tab[2] == 0)
-        return 1;
-    return 0;
+		return 1;	
+	preg_match("(^[L|l]undi|^[M|m]ardi|^[M|m]ercredi|^[J|j]eudi|^[V|v]endredi|^[S|s]amedi|^[D|d]imanche)", $tab[0], $matches);
+	if (count($matches) != 1)
+		return 1;
+	if (preg_match("/^[0-3][0-9]$/", $tab[1]) === 0)
+		return 1;
+	if	($tab[1] > 31 && $tab[1] < 40)
+		return 1;
+	if (preg_match("/^[0-9]{4}$/", $tab[3]) === 0)
+		return 1;
+	if (preg_match("/^[0-9]{2}$/", $tab[4]) === 0)
+		return 1;
+	if (preg_match("/^[0-9]{2}$/", $tab[5]) === 0)
+		return 1;
+	if (preg_match("/^[0-9]{2}$/", $tab[6]) === 0)
+		return 1;
+	return 0;
 }
 
-function get_number($s1)
+function month_getter($s1)
 {
 	if ($s1 == "janvier" || $s1 == "Janvier")
 		return (1);
@@ -50,10 +65,14 @@ function get_number($s1)
 if($argc == 2)
     {
         $arr = ft_split($argv[1]);
-        $arr[2] = get_number($arr[2]);
-        if(check_date($arr))
-            echo("Wrong Format"."\n");
-        
-        print_r($arr);
-    }
+        $arr[2] = month_getter($arr[2]);
+		if(check_date($arr))
+		{
+			echo("Wrong Format"."\n");
+			exit();
+		}
+        echo mktime($arr[4], $arr[5], $arr[6], $arr[2], $arr[1], $arr[3])."\n";
+	}
+	else
+		echo("Wrong Format"."\n");
 ?>
