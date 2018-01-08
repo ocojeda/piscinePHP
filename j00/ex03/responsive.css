@@ -1,4 +1,5 @@
 *{
+    
     text-align: center;
 }
 body
@@ -6,32 +7,27 @@ body
     background: url('https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F98%2FWikilaurier_-_chimie.svg%2F450px-Wikilaurier_-_chimie.svg.png&f=1') no-repeat center center fixed;
     background-size: cover;
 }
+
 table
 {
-    font-size-adjust: auto;
-    border: 3px solid black;
-}
-td
-{
-    font-size-adjust: 0.5;
-    height: 5vh;
-    min-width: 70px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
 }
 
 .symbol
 {
-    font-size: 4vh;  
+    font-size: 1vw;
 }
 .weight
 {
     text-align: right;   
-    font-size: 1vh;
+    font-size: 1vw;   
 }
 .num
 {
-    
     text-align: left;
-    font-size: 2vh;
+    font-size: 1vw;
 }
 .Gold
 {
@@ -79,4 +75,3 @@ td
     border: 1px solid black;
     background-color: rgba(247, 152, 233, 0.818);
 }		
-</style>
