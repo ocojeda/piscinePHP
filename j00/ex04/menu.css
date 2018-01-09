@@ -2,45 +2,13 @@ body
 {
     background-color: #dfdede;
 }
-#menu ul {
-    margin:0;
-    padding:0;
-    list-style-type:none;
-    text-align:center;
-    }
-   #menu li {
-    float:left;
-    margin:auto;
-    padding:0;
-    background-color: rgb(180, 236, 252);
-    }
-   #menu li a {
-    display:block;
-    width:100px;
-    color:white;
-    text-decoration:none;
-    padding:5px;
-    }
-   #menu li a:hover 
-   {
-    color:#FFD700;
-    }
-    #menu ul li ul 
-    {
-        display:none;
-    }
-    #menu ul li:hover ul {
-        display:block;
-     }
-           #menu li:hover ul li {
-            float:none;
-            }
-            #menu li ul {
-                position:absolute;
-                }
-                #menu {
-                    height:50px;
-                    }
+
+  ul ul {display: none; position: absolute; left: 144px; top: -1px; margin:0px; padding: 0px; border: 1px solid grey;}
+  li {list-style-type: none; position: relative; width: 140px; background-color: #E0E0E0; padding: 2px; margin: 0px}
+ 
+  li:hover ul.niveau2, li li:hover ul.niveau3 {display: block}
+  li.plus {background-position:right; background-image: url(illustrations/fdroite.gif); background-repeat: no-repeat; border-bottom: 1px solid grey;}
+
 .title1
 {
     background-color: #ecf6d9;
