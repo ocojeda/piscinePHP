@@ -14,6 +14,12 @@ function ft_split($str)
             $str1[$u] = $var;
             $u++;
         }
+        else if
+            ($var == "0")
+        {
+            $str1[$u] = "0";
+            $u++;
+        }
     }
         return ($str1);
     }
@@ -42,13 +48,7 @@ function    print_assap($arr)
     {
         $u = 1;
         $arr = ft_split($argv[$u]);
-    /*
-    *
-        ./ssap2.php toto tutu 4234 "_hop XXX" ## "1948372 AhAhAh"
-        test a essayer dans une outre machine, la mienn donne 5
-        a argv  pourtant il y a 7 arguments
-        echo(count($argv));
-    */    $u++;
+        $u++;
         while($u < $argc)
         {
             $arr = array_merge($arr, ft_split($argv[$u]));

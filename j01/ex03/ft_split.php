@@ -8,19 +8,17 @@ function ft_split($str)
         $r = explode(' ', $str);
         $str1 = array();
         $u = 0;
-    foreach($r as $var)
-    {
-        if (!empty($var))
+        foreach($r as $var)
         {
-            $str1[$u] = $var;
-            $u++;
+            if (!empty($var))
+            {
+                $str1[$u] = $var;
+                $u++;
+            }
         }
-    }
-        return ($str1);
+            return ($str1);
     }
     $r = explode(' ', $str);
     return ($r);
-    //not sure what to return when argv1=numeric
-    return $str;
 }
 ?>

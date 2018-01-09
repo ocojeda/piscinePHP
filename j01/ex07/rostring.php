@@ -14,6 +14,12 @@ function ft_split($str)
             $str1[$u] = $var;
             $u++;
         }
+        else if
+            ($var == "0")
+        {
+            $str1[$u] = "0";
+            $u++;
+        }
     }
         return ($str1);
     }

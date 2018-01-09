@@ -14,6 +14,11 @@ function ft_split($str)
             $str1[$u] = $var;
             $u++;
         }
+        else if ($var == "0")
+        {
+            $str1[$u] = "0";
+            $u++;
+        }
     }
         return ($str1);
     }
@@ -69,7 +74,7 @@ function    retrieve_nonalpha($arr)
     $arr3 = array();
     foreach($arr as $arr2)
     {
-        if ( (!ctype_alpha($arr2)) && !(is_numeric($arr2)))
+        if ((!ctype_alpha($arr2)) && !(is_numeric($arr2)))
             {
                 $arr3 = array_merge($arr3, ft_split($arr2));
             }
@@ -85,7 +90,7 @@ function    retrieve_nonalpha($arr)
             $arr = array_merge($arr, ft_split($argv[$u]));
             $u++;
         }
-        sort($arr);
+        $arr3 = sort($arr, SORT_NATURAL | SORT_FLAG_CASE);
         $arr3 = retrieve_alpha($arr);
         $arr3 = array_merge($arr3, retrieve_numerique($arr));
         $arr3 = array_merge($arr3, retrieve_nonalpha($arr));

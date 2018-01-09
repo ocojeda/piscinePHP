@@ -1,5 +1,6 @@
 #!/usr/bin/php
 <?PHP
+include ("ex08/ft_is_sort.php");
 function ft_split($str)
 {
     if(!(is_numeric($str)))
@@ -14,33 +15,32 @@ function ft_split($str)
             $str1[$u] = $var;
             $u++;
         }
-        else if ($var == "0")
+        else if
+            ($var == "0")
         {
             $str1[$u] = "0";
             $u++;
         }
-      }
+    }
         return ($str1);
     }
     $r = explode(' ', $str);
     return ($r);
 }
-    if($argc == 2)
+    if($argc >= 2)
     {
-        $arr = ft_split($argv[1]);
-        $i = count($arr);
-        echo($arr[0]);
-        if ($i > 1)
-        {   
-            echo(" ");
-            $u = 1;
-            while($u < $i - 1)
-            {
-                echo($arr[$u].' ');
-                $u++;
-            }
-            echo($arr[$u]);
+        $u = 1;
+        $arr = ft_split($argv[$u]);
+        $u++;
+        while($u < $argc)
+        {
+            $arr = array_merge($arr, ft_split($argv[$u]));
+            $u++;
         }
-        echo("\n");
+        if (ft_is_sort($arr))
+        echo "Le tableau est trie\n";
+        else
+        echo "Le tableau n’est pas trie\n";
+        print_r($arr);
     }
 ?>

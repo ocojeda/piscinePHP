@@ -3,18 +3,12 @@
 
     if($argc >= 2)
     {
-        foreach($argv as $var)
+        $i = 1;
+        while($i < $argc)
         {
-
-            if($var == $argv[0])
-            {
-
-            }
-            else
-            {
-                echo("$var");
-                echo "\n";
-            }
+            echo("$argv[$i]");
+            echo "\n";
+            $i++;
         }
     }
 ?>

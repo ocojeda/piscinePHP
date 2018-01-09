@@ -1,6 +1,6 @@
 #!/usr/bin/php
 <?PHP
-
+date_default_timezone_set('Europe/paris');
 function ft_split($str)
 {
     $r = explode(' ', trim(preg_replace('/[" "":"]/', ' ', $str))); 

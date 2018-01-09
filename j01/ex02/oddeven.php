@@ -1,11 +1,12 @@
 #!/usr/bin/php
 <?PHP
 print("Entrez un nombre: ");
-while($i = fgets(STDIN))
+while(1)
 {
-    $d = intval($i);
+    $i = trim(fgets(STDIN));
     if(is_numeric($i))
     {
+        $d = intval($i);
         if($d % 2 == 0)
             printf("Le chiffre %d est Pair\n", $d);
         else
