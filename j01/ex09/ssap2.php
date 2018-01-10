@@ -49,9 +49,9 @@ function    retrieve_numerique($arr)
     foreach($arr as $arr2)
     {
         if (is_numeric($arr2))
-            {
+        {
                 $arr3 = array_merge($arr3, ft_split($arr2));
-            }
+        }
     }
     sort($arr3, SORT_STRING);
     return $arr3;
@@ -61,10 +61,10 @@ function    retrieve_alpha($arr)
     $arr3 = array();
     foreach($arr as $arr2)
     {
-        if (ctype_alpha($arr2))
-            {
+        if (ctype_alpha($arr2) && !is_numeric($arr2))
+        {
                 $arr3 = array_merge($arr3, ft_split($arr2));
-            }
+        }
     }
     return $arr3;
 }
